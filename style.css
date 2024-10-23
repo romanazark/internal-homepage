@@ -1,0 +1,120 @@
+* {
+    font-family: "Century Gothic";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    position: relative;
+    background: rgba(0, 0, 0, 1); /* Dark overlay */
+}
+
+.overlay {
+    position: absolute;
+    opacity: 0.35;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.main-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.main-h1 {
+    font-size: 70px;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    opacity: 0;
+    animation: showTitle 1s ease-in-out forwards;
+}
+
+@keyframes showTitle {
+    to {
+        letter-spacing: 5px;
+        opacity: 1;
+    }
+}
+
+.main-h2 {
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    letter-spacing: 0px;
+    opacity: 0;
+    animation: increaseLetterSpacing 2s ease-in-out forwards;
+}
+
+@keyframes increaseLetterSpacing {
+    to {
+        opacity: 1;
+        letter-spacing: 25px;
+    }
+}
+
+.link-container {
+    /* border: 2px solid yellow; */
+    padding: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.link {
+    border: 2px solid white;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+    padding: 15px 25px;
+    opacity: 0; /* Start hidden */
+    transform: translateY(100%); /* Move down for bottom link */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for links */
+}
+
+.link:hover {
+    background-color: white;
+    color: black;
+    transition: linear 500ms;
+}
+
+/* Animations for each link */
+.link-project-form {
+    animation: slideInLeft 0.5s forwards 0.5s; /* Slide in from left */
+}
+
+.link-change-form {
+    animation: slideInBottom 0.5s forwards 1s; /* Slide in from bottom */
+}
+
+.link-client-form {
+    animation: slideInRight 0.5s forwards 1.5s; /* Slide in from right */
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+@keyframes slideInBottom {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1; /* Fade in */
+        transform: translateY(0); /* Move to original position */
+    }
+}
