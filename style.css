@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 * {
-    font-family: "Century Gothic";
+    font-family: "Inter", serif;
     margin: 0;
     padding: 0;
 }
@@ -60,7 +61,7 @@ body {
     /* border: 2px solid yellow; */
     padding: 200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -77,6 +78,12 @@ body {
     opacity: 0; /* Start hidden */
     transform: translateY(100%); /* Move down for bottom link */
     transition: opacity 0.5s ease, transform 0.5s ease; /* Transition for links */
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    display: flex; /* Enable Flexbox */
+    align-items: center; /* Vertically center */
+    justify-content: center; /* Horizontally center */
 }
 
 .link:hover {
@@ -87,32 +94,22 @@ body {
 
 /* Animations for each link */
 .link-project-form {
-    animation: slideInLeft 0.5s forwards 0.5s; /* Slide in from left */
+    animation: slideIn 0.5s forwards 0.5s; /* Slide in from left */
 }
 
 .link-change-form {
-    animation: slideInBottom 0.5s forwards 1s; /* Slide in from bottom */
+    animation: slideIn 0.5s forwards 1s; /* Slide in from bottom */
 }
 
 .link-client-form {
-    animation: slideInRight 0.5s forwards 1.5s; /* Slide in from right */
+    animation: slideIn 0.5s forwards 1.5s; /* Slide in from right */
 }
 
-@keyframes slideInLeft {
-    to {
-        opacity: 1; /* Fade in */
-        transform: translateY(0); /* Move to original position */
-    }
+.link-service-form {
+    animation: slideIn 0.5s forwards 2s; /* Slide in from right */
 }
 
-@keyframes slideInBottom {
-    to {
-        opacity: 1; /* Fade in */
-        transform: translateY(0); /* Move to original position */
-    }
-}
-
-@keyframes slideInRight {
+@keyframes slideIn {
     to {
         opacity: 1; /* Fade in */
         transform: translateY(0); /* Move to original position */
