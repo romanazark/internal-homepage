@@ -94,19 +94,23 @@ body {
 
 /* Animations for each link */
 .link-project-form {
-    animation: slideIn 0.5s forwards 0.5s; /* Slide in from left */
+    animation: slideIn 0.5s forwards 0.5s; /* Slide in */
 }
 
 .link-change-form {
-    animation: slideIn 0.5s forwards 1s; /* Slide in from bottom */
+    animation: slideIn 0.5s forwards 1s; /* Slide in */
 }
 
 .link-client-form {
-    animation: slideIn 0.5s forwards 1.5s; /* Slide in from right */
+    animation: slideIn 0.5s forwards 1.5s; /* Slide in */
 }
 
 .link-service-form {
-    animation: slideIn 0.5s forwards 2s; /* Slide in from right */
+    animation: slideIn 0.5s forwards 2s; /* Slide in */
+}
+
+.link-employee-form {
+    animation: slideIn 0.5s forwards 2.5s; /* Slide in */
 }
 
 @keyframes slideIn {
