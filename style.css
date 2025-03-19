@@ -105,12 +105,16 @@ body {
     animation: slideIn 0.5s forwards 1.5s; /* Slide in */
 }
 
-.link-service-form {
+.link-expeditors-form {
     animation: slideIn 0.5s forwards 2s; /* Slide in */
 }
 
-.link-employee-form {
+.link-service-form {
     animation: slideIn 0.5s forwards 2.5s; /* Slide in */
+}
+
+.link-employee-form {
+    animation: slideIn 0.5s forwards 3s; /* Slide in */
 }
 
 @keyframes slideIn {
