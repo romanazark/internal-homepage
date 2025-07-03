@@ -1,25 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Homepage | AZARK</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/AZ-logo.png" type="image/x-icon">
+
+    <!-- Toggle Styles -->
+    <style>
+
+    </style>
 </head>
+
 <body>
     <img src="./images/Walking-Architecture-bg.webp" alt="" class="overlay">
     <div class="main-container">
-        <h1 class="main-h1">AZARK</h1>
-        <h2 class="main-h2">INTERNAL HOMEPAGE</h2>
-        <div class="link-container">
+        <div>
+            <h1 class="main-h1">AZARK</h1>
+            <h2 class="main-h2">INTERNAL HOMEPAGE</h2>
+        </div>
+
+
+        <!-- Toggle between Stable and New forms -->
+        <div class="form-toggle">
+            <button id="stableBtn" class="toggle-btn active">Stable</button>
+            <button id="newBtn" class="toggle-btn">New</button>
+        </div>
+
+        <!-- Stable Forms Container -->
+        <div id="stableForms" class="link-container">
             <a href="https://azark-new-project-form.vercel.app/" class="link link-project-form">Project Form</a>
-            <a href="https://form.jotform.com/241561757509059" class="link link-change-form">Client/Contact Intake Form</a>
-            <a href="https://azark-change-order-form.vercel.app/" class="link link-client-form">Change Order Form</a>
-            <a href="https://romanazark.github.io/expeditors-form/" class="link link-expeditors-form">Expeditors Form (temporary link)</a>
-            <a href="https://airtable.com/apphyPAEq7ZqPB9bI/shrvpFe13fs4ShtXQ" class="link link-service-form">New Service Form</a>
-            <a href="https://airtable.com/apphyPAEq7ZqPB9bI/shrxUFc2KMHXcvvhT" class="link link-employee-form">New Employee Form</a>
+            <a href="https://form.jotform.com/241561757509059" class="link link-client-form">Client/Contact Intake
+                Form</a>
+            <a href="https://azark-change-order-form.vercel.app/" class="link link-change-form">Change Order Form</a>
+            <a href="https://romanazark.github.io/expeditors-form/" class="link link-expeditors-form">Expeditors Form
+                (temporary link)</a>
+            <a href="https://airtable.com/apphyPAEq7ZqPB9bI/shrvpFe13fs4ShtXQ" class="link link-service-form">New
+                Service Form</a>
+            <a href="https://airtable.com/apphyPAEq7ZqPB9bI/shrxUFc2KMHXcvvhT" class="link link-employee-form">New
+                Employee Form</a>
+        </div>
+
+        <!-- New Forms Container (hidden by default) -->
+        <div id="newForms" class="link-container" style="display: none;">
+            <!-- Add your new form links here -->
+            <a href="https://azark-new-project-form-custom.vercel.app/" class="link link-project-form">Project Form</a>
+            <a href="https://azark-change-order-form-custom.vercel.app/" class="link link-client-form">Change Order
+                Form</a>
+            <a href="https://azark-client-contact-form-custom.vercel.app/" class="link link-change-form">Client/Contact
+                Intake Form</a>
         </div>
     </div>
+
+    <!-- Toggle Script -->
+    <script>
+        const stableBtn = document.getElementById('stableBtn');
+        const newBtn = document.getElementById('newBtn');
+        const stableForms = document.getElementById('stableForms');
+        const newForms = document.getElementById('newForms');
+
+        stableBtn.addEventListener('click', () => {
+            stableBtn.classList.add('active');
+            newBtn.classList.remove('active');
+            stableForms.style.display = 'flex';
+            newForms.style.display = 'none';
+        });
+        newBtn.addEventListener('click', () => {
+            newBtn.classList.add('active');
+            stableBtn.classList.remove('active');
+            newForms.style.display = 'flex';
+            stableForms.style.display = 'none';
+        });
+    </script>
 </body>
+
 </html>
