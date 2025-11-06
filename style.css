@@ -163,6 +163,11 @@ body {
     /* Slide in */
 }
 
+.link-az-bubble-portal {
+    animation: slideIn 0.5s forwards 3.5s;
+    /* Slide in */
+}
+
 @keyframes slideIn {
     to {
         opacity: 1;
